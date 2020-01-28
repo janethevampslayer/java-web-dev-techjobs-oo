@@ -12,6 +12,14 @@ public class CoreCompetency {
         nextId++;
     }
 
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
     public CoreCompetency(String value) {
         this();
         this.value = value;
@@ -22,6 +30,10 @@ public class CoreCompetency {
     @Override
     public String toString() {
         return value;
+    }
+
+    public int getId() {
+        return id;
     }
 
     @Override
