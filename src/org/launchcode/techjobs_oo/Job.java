@@ -90,7 +90,40 @@ public class Job {
         return Objects.hash(id);
     }
 
+    @Override
+    public String toString() {
+        String message = "Data not available";
 
-    // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
-    //  and id.
-}
+        if (name.equals("")) {
+            name = message;
+        }
+
+        if (employer.getValue().equals("")) {
+            employer.setValue(message);
+        }
+
+        if (location.getValue().equals("")) {
+            location.setValue(message);
+        }
+
+        if (positionType.getValue().equals("")) {
+            positionType.setValue(message);
+        }
+
+        if (coreCompetency.getValue().equals("")) {
+            coreCompetency.setValue(message);
+        }
+
+        return String.format("\n ID: %d\n Name: %s\n Employer: %s\n Location: %s\n Position Type: %s\n Core Competency: %s\n",
+                id,
+                name,
+                employer.getValue(),
+                location.getValue(),
+                positionType.getValue(),
+                coreCompetency.getValue());
+
+    }
+
+        // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
+        //  and id.
+    }
